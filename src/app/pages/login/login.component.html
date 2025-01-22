@@ -1,14 +1,13 @@
 <div class="area-login-background d-none d-md-block"></div>
 
 <div class="area-form">
-  <form action="">
+  <form>
     <h1 class="title">CRUD USERS</h1>
     <h2 class="subtitle">Mais eficiência no controle de usuários</h2>
 
-    <input class="input-form" type="text" placeholder="Digite o seu nome">
+    <input [(ngModel)]="userName" [ngModelOptions]="{standalone: true}" class="input-form" type="text" placeholder="Digite o seu nome">
 
-    <app-button textButton="Acessar" size="100"></app-button>
-
+    <app-button textButton="Acessar" size="100" (click)="login()"></app-button>
   </form>
   
   <p class="footer">&copy; 2025 | Desenvolvido por Caio</p>

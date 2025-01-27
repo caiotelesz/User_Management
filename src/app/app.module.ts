@@ -9,6 +9,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { CrudComponent } from './pages/crud/crud.component';
 
 // Angular Material
 import { MatIconModule } from '@angular/material/icon';
@@ -17,6 +18,8 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment.development';
 import { AngularFireModule } from '@angular/fire/compat';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,8 @@ import { AngularFireModule } from '@angular/fire/compat';
     ButtonComponent,
     LoginComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    CrudComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +36,8 @@ import { AngularFireModule } from '@angular/fire/compat';
     FormsModule,
     MatIconModule,
     MatProgressSpinnerModule,
+    MatFormFieldModule,
+    MatInputModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [

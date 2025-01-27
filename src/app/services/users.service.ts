@@ -8,16 +8,6 @@ import { User } from '../interfaces/user';
 })
 export class UsersService {
 
-  nome: string = 'Caio Teles';
-
-  user: User = {
-    name: 'Caio Teles',
-    email: 'caio.teles@gmail.com',
-    sector: 'Tecnologia',
-    role: 'Desenvolvedor Front End Angular'
-  }
-
-
   constructor(private dataBaseStore: AngularFirestore) { }
 
   // Get all users

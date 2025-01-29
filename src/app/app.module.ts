@@ -20,6 +20,9 @@ import { environment } from '../environments/environment.development';
 import { AngularFireModule } from '@angular/fire/compat';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -34,10 +37,15 @@ import { MatInputModule } from '@angular/material/input';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+
+    // Angular Material
     MatIconModule,
     MatProgressSpinnerModule,
     MatFormFieldModule,
     MatInputModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [

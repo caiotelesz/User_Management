@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
+import { UsersService } from '../../../services/users.service';
+import { User } from '../../../interfaces/user';
 
 @Component({
   selector: 'app-modal-form-user',
@@ -44,11 +46,27 @@ export class ModalFormUserComponent {
 
   constructor(
     public dialogRef: MatDialogRef<ModalFormUserComponent>,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private userService: UsersService
   ) {}
 
   ngOnInit() {
     this.buildForm();
+  }
+
+  // SAVE USER
+  saveUser() {
+    const objUserForm: User = this.formUser.getRawValue();
+
+    this.userService.addUser(objUserForm).then(
+      (response: any) => {
+        window.alert('Usuário Salvo com sucesso');
+        this.closeModal();
+      })
+      .catch(err => {
+        window.alert('Houve um erro ao salvar o usuário');
+        console.error(err);
+      });
   }
 
   buildForm() {

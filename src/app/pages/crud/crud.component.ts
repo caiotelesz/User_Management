@@ -56,6 +56,14 @@ export class CrudComponent {
     });
   }
 
+  deleteUser(firebaseId: string) {
+    this.userService.deleteUser(firebaseId).then(
+      (response: any) => {
+        window.alert('Usuário excluido com sucesso')
+      }
+    )
+  }
+
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();

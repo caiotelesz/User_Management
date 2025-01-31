@@ -64,7 +64,7 @@
           <td class="td-table" mat-cell *matCellDef="let user">
             <mat-icon class="icone-table" (click)="openModalViewUser(user)">visibility</mat-icon>    
             <mat-icon class="icone-table" (click)="openModalEditUser(user)">edit</mat-icon> 
-            <mat-icon class="icone-table">delete</mat-icon> 
+            <mat-icon class="icone-table" (dblclick)="deleteUser(user.firebaseId)">delete</mat-icon> 
           </td>
         </ng-container>
     

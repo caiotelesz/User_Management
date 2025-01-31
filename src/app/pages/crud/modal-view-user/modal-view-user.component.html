@@ -23,13 +23,26 @@
     </div>
     <div class="col-6">
       <h4 class="title-information">Plano de Saúde</h4>
-      <p class="information" *ngIf="userData.healthPlan">{{userData.healthPlan}}</p>
-      <p class="information">-</p>
+
+      @if (userData.healthPlan) {
+        <p class="information">{{userData.healthPlan}}</p>
+      }
+
+      @if (!userData.healthPlan) {
+        <p class="information">-</p>
+      }
+            
     </div>
     <div class="col-6">
       <h4 class="title-information">Plano Odontológico</h4>
-      <p class="information" *ngIf="userData.dentalPlan">{{userData.dentalPlan}}</p>
-      <p class="information">-</p>
+
+      @if (!userData.dentalPlan) {
+        <p class="information">{{userData.dentalPlan}}</p>
+      }
+
+      @if (!userData.dentalPlan) {
+        <p class="information">-</p>
+      }
     </div>
   </div>
 </div>

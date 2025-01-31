@@ -63,7 +63,7 @@
           <th class="th-table" mat-header-cell *matHeaderCellDef mat-sort-header> </th>
           <td class="td-table" mat-cell *matCellDef="let user">
             <mat-icon class="icone-table" (click)="openModalViewUser(user)">visibility</mat-icon>    
-            <mat-icon class="icone-table">edit</mat-icon> 
+            <mat-icon class="icone-table" (click)="openModalEditUser(user)">edit</mat-icon> 
             <mat-icon class="icone-table">delete</mat-icon> 
           </td>
         </ng-container>

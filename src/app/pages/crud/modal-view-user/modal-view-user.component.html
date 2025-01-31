@@ -29,19 +29,19 @@
       }
 
       @if (!userData.healthPlan) {
-        <p class="information">-</p>
+        <p class="information">Não possui</p>
       }
             
     </div>
     <div class="col-6">
       <h4 class="title-information">Plano Odontológico</h4>
 
-      @if (!userData.dentalPlan) {
+      @if (userData.dentalPlan) {
         <p class="information">{{userData.dentalPlan}}</p>
       }
 
       @if (!userData.dentalPlan) {
-        <p class="information">-</p>
+        <p class="information">Não possui</p>
       }
     </div>
   </div>
